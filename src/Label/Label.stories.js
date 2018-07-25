@@ -1,24 +1,24 @@
 import React from "react";
 
 import { storiesOf } from "@storybook/react";
-import { Button } from "./Button";
+import { Label } from "./Label";
+import { Button } from "../Button/Button.tsx";
 import { wInfo } from "../../utils";
 import { text, boolean } from "@storybook/addon-knobs/react";
 
-storiesOf("Components/Button", module).addWithJSX(
-  "Basic Button",
+storiesOf("Components/Label", module).addWithJSX(
+  "Basic Label",
   wInfo(`
 
   ### Notes
 
-  This is a button
+  This is a Label
 
   ### Usage
   ~~~js
-  <Button
-    label={'Enroll'}
-    disabled={false}
-    onClick={() => alert('hello there')}
+  <Label
+    title="test" 
+    color="pink" optional
   />
   ~~~`)(() => (
     <Button
@@ -26,5 +26,6 @@ storiesOf("Components/Button", module).addWithJSX(
       disabled={boolean("disabled", false)}
       onClick={() => alert("hello there")}
     />
+    // <Label title="test" />
   ))
 );
