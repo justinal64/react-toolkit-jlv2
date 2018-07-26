@@ -1,5 +1,6 @@
 import * as React from "react";
 import "./Button.css";
+
 export interface Props {
   /** this dictates what the button will say  */
   label: string;
@@ -12,7 +13,7 @@ export interface Props {
    **/
   disabled?: boolean;
 }
-const noop = () => {}; // tslint:disable-line
+const noop = () => {};
 export const Button = (props: Props) => {
   const { label, onClick, disabled = false } = props;
   const disabledclass = disabled ? "Button_disabled" : "";

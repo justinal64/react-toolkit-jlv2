@@ -6,7 +6,7 @@ import { wInfo } from "../../utils";
 import { text, boolean } from "@storybook/addon-knobs/react";
 
 storiesOf("Components/Button", module).addWithJSX(
-  "basic Button",
+  "Basic Button",
   wInfo(`
 
   ### Notes
