@@ -17,8 +17,8 @@ storiesOf("Components/Label", module).addWithJSX(
   ### Usage
   ~~~js
   <Label
-    title="test" 
-    color="pink" optional
+    title="Test" 
+    color="pink"
   />
-  ~~~`)(() => <Label title="test" />)
+  ~~~`)(() => <Label title="Test" color="black" />)
 );
