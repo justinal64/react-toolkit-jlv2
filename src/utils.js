@@ -21,5 +21,24 @@ const wInfoStyle = {
     lineHeight: "2"
   }
 };
+
+export const displayBlock = `
+  display: block;
+  width: 100%;
+`;
+
+export const disabledButton = `
+opacity: .65;
+pointer-events: none;
+`;
+
+export const getFontSize = (props: any) =>
+  props.font ? `font-size: ${props.font}rem;` : "";
+
+export const getColor = (props: any) =>
+  props.color ? `color: ${props.color};` : "";
+
 export const wInfo = text =>
   withInfo({ inline: true, source: false, styles: wInfoStyle, text: text });
+
+export default { getFontSize, getColor, wInfo, displayBlock, disabledButton };
