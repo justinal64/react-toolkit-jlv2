@@ -21,8 +21,11 @@ storiesOf("Components/Button", module).addWithJSX(
     inverted={false} 
     disabled={false} 
     block={true}
+    buttonType="Primary"
     onClick={() => console.log("test")}
   />
+  
+  Note: buttonType can be Primary, Secondary, Success, Warning or Danger
   ~~~`)(() => (
     <Button
       title="Title"
@@ -30,6 +33,7 @@ storiesOf("Components/Button", module).addWithJSX(
       inverted={false}
       disabled={false}
       block={true}
+      buttonType="Primary"
       onClick={() => console.log("test")}
     />
   ))

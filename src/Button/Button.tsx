@@ -76,7 +76,7 @@ const StyledButton = styled.button`
   margin: 0.15em;
   background-color: transparent;
   font-size: ${(props: any) => (props.font ? props.font : "1")}rem;
-  ${(props: any) => themePicker(props.inverted, props.button)};
+  ${(props: any) => themePicker(props.inverted, props.buttonType)};
   ${(props: any) => (props.disabled ? disabledButton : "")};
 `;
 
@@ -84,6 +84,12 @@ export interface Props {
   /**  Button Title  */
 
   title: string;
+
+  /**  See Note above
+   * @default Primary
+   */
+
+  buttonType: string;
 
   /**  Measured in rem
    * @default 1
@@ -115,11 +121,12 @@ export interface Props {
 }
 
 export const Button = (props: Props) => {
-  let { title, font, inverted, disabled, block, onClick } = props;
+  let { title, buttonType, font, inverted, disabled, block, onClick } = props;
   onClick =
     typeof onClick === "function" ? onClick : () => console.log("Working!");
   return (
     <StyledButton
+      buttonType={buttonType}
       title={title}
       font={font}
       inverted={inverted}
