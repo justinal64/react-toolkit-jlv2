@@ -1,28 +1,133 @@
 import * as React from "react";
-import "./Button.css";
+import styled from "styled-components";
+import {
+  InvertedPrimaryButton,
+  InvertedSecondaryButton,
+  InvertedSuccessButton,
+  InvertedWarningButton,
+  InvertedDangerButton,
+  PrimaryButton,
+  SecondaryButton,
+  SuccessButton,
+  WarningButton,
+  DangerButton
+} from "../Styles/Styles";
+
+export const displayBlock = `
+  display: block;
+  width: 100%;
+`;
+
+export const disabledButton = `
+opacity: .65;
+pointer-events: none;
+`;
+
+const invertedButtonPicker = (button: string) => {
+  if (button === "Primary") {
+    return InvertedPrimaryButton;
+  } else if (button === "Secondary") {
+    return InvertedSecondaryButton;
+  } else if (button === "Success") {
+    return InvertedSuccessButton;
+  } else if (button === "Warning") {
+    return InvertedWarningButton;
+  } else if (button === "Danger") {
+    return InvertedDangerButton;
+  } else {
+    return InvertedPrimaryButton;
+  }
+};
+
+const buttonPicker = (button: string) => {
+  if (button === "Primary") {
+    return PrimaryButton;
+  } else if (button === "Secondary") {
+    return SecondaryButton;
+  } else if (button === "Success") {
+    return SuccessButton;
+  } else if (button === "Warning") {
+    return WarningButton;
+  } else if (button === "Danger") {
+    return DangerButton;
+  } else {
+    return PrimaryButton;
+  }
+};
+
+const themePicker = (inverted: boolean, button: string) => {
+  if (inverted) {
+    return invertedButtonPicker(button);
+  } else {
+    return buttonPicker(button);
+  }
+};
+
+const StyledButton = styled.button`
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.5rem 0.75rem;
+  line-height: 1.25;
+  transition: all 0.3s ease-in-out;
+  margin: 0.15em;
+  background-color: transparent;
+  font-size: ${(props: any) => (props.font ? props.font : "1")}rem;
+  ${(props: any) => themePicker(props.inverted, props.button)};
+  ${(props: any) => (props.disabled ? disabledButton : "")};
+`;
 
 export interface Props {
-  /** this dictates what the button will say  */
-  label: string;
-  /** this dictates what the button will do  */
-  onClick: () => void;
-  /**
-   * Disables onclick
-   *
+  /**  Button Title  */
+
+  title: string;
+
+  /**  Measured in rem
+   * @default 1
+   */
+
+  font?: number;
+
+  /**  Think Bootstrap
    * @default false
-   **/
+   */
+
+  inverted?: boolean;
+
+  /**  Disables button
+   * @default false
+   */
+
   disabled?: boolean;
+
+  /**  Button True = Inline
+   * @default false
+   */
+
+  block?: boolean;
+
+  /**  this.chapter  */
+
+  onClick?: () => any;
 }
-const noop = () => {};
+
 export const Button = (props: Props) => {
-  const { label, onClick, disabled = false } = props;
-  const disabledclass = disabled ? "Button_disabled" : "";
+  let { title, font, inverted, disabled, block, onClick } = props;
+  onClick =
+    typeof onClick === "function" ? onClick : () => console.log("Working!");
   return (
-    <div
-      className={`Button ${disabledclass}`}
-      onClick={!disabled ? onClick : noop}
+    <StyledButton
+      title={title}
+      font={font}
+      inverted={inverted}
+      disabled={disabled}
+      display={block ? 1 : 0} // better solution???
+      onClick={onClick}
     >
-      <span>{label}</span>
-    </div>
+      {title}
+    </StyledButton>
   );
 };

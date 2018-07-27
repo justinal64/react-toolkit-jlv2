@@ -6,7 +6,7 @@ import { wInfo } from "../utils";
 import { text, boolean } from "@storybook/addon-knobs/react";
 
 storiesOf("Components/Button", module).addWithJSX(
-  "Basic Button",
+  "Button",
   wInfo(`
 
   ### Notes
@@ -15,16 +15,22 @@ storiesOf("Components/Button", module).addWithJSX(
 
   ### Usage
   ~~~js
-  <Button
-    label={'Enroll'}
-    disabled={false}
-    onClick={() => alert('hello there')}
+  <Button 
+    title="Title" 
+    font={1} 
+    inverted={false} 
+    disabled={false} 
+    block={true}
+    onClick={() => console.log("test")}
   />
   ~~~`)(() => (
     <Button
-      label={text("label", "Enroll")}
-      disabled={boolean("disabled", false)}
-      onClick={() => alert("hello there")}
+      title="Title"
+      font={1}
+      inverted={false}
+      disabled={false}
+      block={true}
+      onClick={() => console.log("test")}
     />
   ))
 );
