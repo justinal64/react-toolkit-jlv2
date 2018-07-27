@@ -7,7 +7,7 @@ import { wInfo } from "../../utils";
 import { text, boolean } from "@storybook/addon-knobs/react";
 
 storiesOf("Components/Label", module).addWithJSX(
-  "Basic Label",
+  "Label",
   wInfo(`
 
   ### Notes
