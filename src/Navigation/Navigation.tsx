@@ -2,6 +2,8 @@ import * as React from "react";
 import styled from "styled-components";
 import { A } from "../Elements/Elements";
 import "./Navigation.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 export interface Props {
   title: string;
@@ -34,16 +36,20 @@ export const Navigation = (props: Props) => {
         <ul>
           <span>Logo Here</span>
           <Li>
-            <a href="http://www.google.com">Google</a>
+            <A href="http://www.google.com">Google</A>
           </Li>
           <Li>
-            <a href="http://www.google.com">Google</a>
+            <A href="http://www.google.com">Google</A>
           </Li>
           <Li>
-            <a href="http://www.google.com">Google</a>
+            <A href="http://www.google.com">Google</A>
           </Li>
           <div className="dropdown">
-            <A href="http://www.google.com">Google</A>
+            <A href="http://www.google.com">
+              <span>
+                Google<FontAwesomeIcon icon={faAngleDown} />
+              </span>
+            </A>
             <div className="dropdown-content">
               <div className="dropdown-hover">
                 <A href="http://www.google.com">Link 1</A>
