@@ -1,5 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
+import { A } from "../Elements/Elements";
 import "./Navigation.css";
 
 export interface Props {
@@ -26,11 +27,6 @@ const Li = styled.li`
   list-style-type: none;
 `;
 
-const A = styled.a`
-  display: block;
-  margin: 0.2em;
-`;
-
 export const Navigation = (props: Props) => {
   return (
     <StyledNav>
@@ -47,16 +43,16 @@ export const Navigation = (props: Props) => {
             <a href="http://www.google.com">Google</a>
           </Li>
           <div className="dropdown">
-            <span>Mouse over me</span>
+            <A href="http://www.google.com">Google</A>
             <div className="dropdown-content">
               <div className="dropdown-hover">
-                <A href="http://www.google.com">Google</A>
+                <A href="http://www.google.com">Link 1</A>
               </div>
               <div className="dropdown-hover">
-                <A href="http://www.google.com">Google</A>
+                <A href="http://www.google.com">Link 2</A>
               </div>
               <div className="dropdown-hover">
-                <A href="http://www.google.com">Google</A>
+                <A href="http://www.google.com">Link 3</A>
               </div>
             </div>
           </div>
