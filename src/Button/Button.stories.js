@@ -11,7 +11,7 @@ storiesOf("Components/Button", module).addWithJSX(
 
   ### Notes
 
-  This is a button
+  buttonType can be Primary, Secondary, Success, Warning or Danger
 
   ### Usage
   ~~~js
@@ -25,7 +25,6 @@ storiesOf("Components/Button", module).addWithJSX(
     onClick={() => console.log("test")}
   />
   
-  Note: buttonType can be Primary, Secondary, Success, Warning or Danger
   ~~~`)(() => (
     <Button
       title="Title"
