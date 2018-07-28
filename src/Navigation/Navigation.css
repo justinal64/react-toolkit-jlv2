@@ -22,3 +22,7 @@
     color: #16181b;
     background-color: lightgray;
 }
+
+.icon-spacing {
+    padding-left: .25em;
+}

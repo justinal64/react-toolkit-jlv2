@@ -46,8 +46,9 @@ export const Navigation = (props: Props) => {
           </Li>
           <div className="dropdown">
             <A href="http://www.google.com">
-              <span>
-                Google<FontAwesomeIcon icon={faAngleDown} />
+              Google
+              <span className="icon-spacing">
+                <FontAwesomeIcon icon={faAngleDown} />
               </span>
             </A>
             <div className="dropdown-content">
