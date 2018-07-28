@@ -11,8 +11,6 @@ storiesOf("Components/Navigation", module).addWithJSX(
 
   ### Notes
 
-  buttonType can be Primary, Secondary, Success, Warning or Danger
-
   ### Usage
   ~~~js
   <Navigation 

@@ -1,5 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
+import "./Navigation.css";
 
 export interface Props {
   title: string;
@@ -16,8 +17,18 @@ background-color: pink;
 `;
 
 const Div = styled.div`
-  display: inline-block;
+  display: inLine-block;
   background-color: red;
+`;
+
+const Li = styled.li`
+  display: inline-block;
+  list-style-type: none;
+`;
+
+const A = styled.a`
+  display: block;
+  margin: 0.2em;
 `;
 
 export const Navigation = (props: Props) => {
@@ -26,12 +37,29 @@ export const Navigation = (props: Props) => {
       <Div>
         <ul>
           <span>Logo Here</span>
-          <a href="http://www.google.com">Google</a>
-          <a href="http://www.google.com">Google</a>
-          <a href="http://www.google.com">Google</a>
-          <a href="http://www.google.com">Google</a>
-          <a href="http://www.google.com">Google</a>
-          <a href="http://www.google.com">Google</a>
+          <Li>
+            <a href="http://www.google.com">Google</a>
+          </Li>
+          <Li>
+            <a href="http://www.google.com">Google</a>
+          </Li>
+          <Li>
+            <a href="http://www.google.com">Google</a>
+          </Li>
+          <div className="dropdown">
+            <span>Mouse over me</span>
+            <div className="dropdown-content">
+              <div className="dropdown-hover">
+                <A href="http://www.google.com">Google</A>
+              </div>
+              <div className="dropdown-hover">
+                <A href="http://www.google.com">Google</A>
+              </div>
+              <div className="dropdown-hover">
+                <A href="http://www.google.com">Google</A>
+              </div>
+            </div>
+          </div>
         </ul>
       </Div>
     </StyledNav>
