@@ -26,3 +26,36 @@
 .icon-spacing {
     padding-left: .25em;
 }
+
+.hamburger {
+    display: none;
+    width: 100%;
+}
+
+.hamburger-icon {
+    font-size: 3em;
+}
+
+.nav {
+    list-style-type: none;
+    text-align: center;
+    /* Remove default styling */
+    -webkit-padding-start: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+}
+
+
+/* Media Query Section */
+
+@media only screen and (max-width: 450px) {
+    body {
+        background-color: lightblue;
+    }
+    .hamburger {
+        display: inline;
+    }
+    .navigation {
+        display: none;
+    }
+}
