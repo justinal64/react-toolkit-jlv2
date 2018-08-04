@@ -1,4 +1,4 @@
-# Project Title
+# react-toolkit-jlv2
 
 Have you ever found yourself copy and pasting the same components between projects? Well this is my answer to that problem. I created an npm package that contains all the components I have created.
 
