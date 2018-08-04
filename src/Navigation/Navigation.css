@@ -41,6 +41,8 @@
     text-align: center;
     /* Remove default styling */
     -webkit-padding-start: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
 }
 
 
