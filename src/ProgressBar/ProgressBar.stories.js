@@ -1,11 +1,11 @@
 import React from "react";
 
 import { storiesOf } from "@storybook/react";
-import { Label } from "./Label";
+import { ProgressBar } from "./ProgressBar";
 import { wInfo } from "../storyutils";
 
-storiesOf("Components/Label", module).addWithJSX(
-  "Label",
+storiesOf("Components/ProgressBar", module).addWithJSX(
+  "ProgressBar",
   wInfo(`
 
   ### Notes
@@ -18,5 +18,5 @@ storiesOf("Components/Label", module).addWithJSX(
     title="Test" 
     color="pink"
   />
-  ~~~`)(() => <Label title="Test" color="black" />)
+  ~~~`)(() => <ProgressBar title="Test" color="black" />)
 );

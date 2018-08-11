@@ -2,8 +2,7 @@ import React from "react";
 
 import { storiesOf } from "@storybook/react";
 import { Dropdown } from "./Dropdown";
-import { wInfo } from "../utils";
-import { text, boolean } from "@storybook/addon-knobs/react";
+import { wInfo } from "../storyutils";
 
 storiesOf("Components/Dropdown", module).addWithJSX(
   "Dropdown",
