@@ -1,4 +1,3 @@
-// change back to .js to fix bigger prob
 import {
   InvertedPrimaryButton,
   InvertedSecondaryButton,
@@ -78,14 +77,4 @@ export const invertedButtonPicker = (button: string) => {
 
 export const themePicker = (inverted: boolean, button: any) => {
   return inverted ? invertedButtonPicker(button) : buttonPicker(button);
-};
-
-export default {
-  getFontSize,
-  getColor,
-  displayBlock,
-  disabledButton,
-  invertedButton,
-  buttonPicker,
-  themePicker
 };
