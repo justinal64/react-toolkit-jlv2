@@ -2,8 +2,7 @@ import React from "react";
 
 import { storiesOf } from "@storybook/react";
 import { Button } from "./Button";
-import { wInfo } from "../utils";
-import { text, boolean } from "@storybook/addon-knobs/react";
+import { wInfo } from "../storyutils";
 
 storiesOf("Components/Button", module).addWithJSX(
   "Button",

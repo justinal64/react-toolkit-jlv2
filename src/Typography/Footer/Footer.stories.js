@@ -2,8 +2,7 @@ import React from "react";
 
 import { storiesOf } from "@storybook/react";
 import { Footer } from "./Footer";
-import { wInfo } from "../../utils";
-import { text, boolean } from "@storybook/addon-knobs/react";
+import { wInfo } from "../../storyutils";
 
 storiesOf("Components/Typography/Footer", module).addWithJSX(
   "Basic Footer",

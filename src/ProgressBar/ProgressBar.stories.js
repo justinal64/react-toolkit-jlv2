@@ -2,8 +2,7 @@ import React from "react";
 
 import { storiesOf } from "@storybook/react";
 import { ProgressBar } from "./ProgressBar";
-import { wInfo } from "../utils";
-import { text, boolean } from "@storybook/addon-knobs/react";
+import { wInfo } from "../storyutils";
 
 storiesOf("Components/ProgressBar", module).addWithJSX(
   "ProgressBar",
