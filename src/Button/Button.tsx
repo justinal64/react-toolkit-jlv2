@@ -48,8 +48,8 @@ export const displayBlock = `
 `;
 
 export const disabledButton = `
-opacity: .65;
-pointer-events: none;
+  opacity: .65;
+  pointer-events: none;
 `;
 
 const StyledButton = styled.button`
