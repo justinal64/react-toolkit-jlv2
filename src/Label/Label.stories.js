@@ -10,13 +10,14 @@ storiesOf("Components/Label", module).addWithJSX(
 
   ### Notes
 
-  This is a Label
+  buttonType can be Primary, Secondary, Success, Warning or Danger
 
   ### Usage
   ~~~js
   <Label
     title="Test" 
-    color="pink"
+    buttonType={"Primary"} 
+    inverted={false}
   />
-  ~~~`)(() => <Label title="Test" color="black" />)
+  ~~~`)(() => <Label title="Test" buttonType={"Primary"} inverted={false} />)
 );

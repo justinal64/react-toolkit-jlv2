@@ -1,15 +1,14 @@
-// change back to .js to fix bigger prob
 import {
-  InvertedPrimaryButton,
-  InvertedSecondaryButton,
-  InvertedSuccessButton,
-  InvertedWarningButton,
-  InvertedDangerButton,
-  PrimaryButton,
-  SecondaryButton,
-  SuccessButton,
-  WarningButton,
-  DangerButton
+  InvertedPrimary,
+  InvertedSecondary,
+  InvertedSuccess,
+  InvertedWarning,
+  InvertedDanger,
+  Primary,
+  Secondary,
+  Success,
+  Warning,
+  Danger
 } from "./Styles/Styles";
 
 export const displayBlock = `
@@ -28,64 +27,22 @@ export const getFontSize = (props: any) =>
 export const getColor = (props: any) =>
   props.color ? `color: ${props.color};` : "";
 
-export const invertedButton = (button: any) => {
-  if (button === "Primary") {
-    return InvertedPrimaryButton;
-  } else if (button === "Secondary") {
-    return InvertedSecondaryButton;
-  } else if (button === "Success") {
-    return InvertedSuccessButton;
-  } else if (button === "Warning") {
-    return InvertedWarningButton;
-  } else if (button === "Danger") {
-    return InvertedDangerButton;
-  } else {
-    return InvertedPrimaryButton;
-  }
+export const invertedTheme = (styleType: any) => {
+  if (styleType === "Secondary") return InvertedSecondary;
+  else if (styleType === "Success") return InvertedSuccess;
+  else if (styleType === "Warning") return InvertedWarning;
+  else if (styleType === "Danger") return InvertedDanger;
+  else return InvertedPrimary;
 };
 
-export const buttonPicker = (button: any) => {
-  if (button === "Primary") {
-    return PrimaryButton;
-  } else if (button === "Secondary") {
-    return SecondaryButton;
-  } else if (button === "Success") {
-    return SuccessButton;
-  } else if (button === "Warning") {
-    return WarningButton;
-  } else if (button === "Danger") {
-    return DangerButton;
-  } else {
-    return PrimaryButton;
-  }
+export const theme = (styleType: any) => {
+  if (styleType === "Secondary") return Secondary;
+  else if (styleType === "Success") return Success;
+  else if (styleType === "Warning") return Warning;
+  else if (styleType === "Danger") return Danger;
+  else return Primary;
 };
 
-export const invertedButtonPicker = (button: string) => {
-  if (button === "Primary") {
-    return InvertedPrimaryButton;
-  } else if (button === "Secondary") {
-    return InvertedSecondaryButton;
-  } else if (button === "Success") {
-    return InvertedSuccessButton;
-  } else if (button === "Warning") {
-    return InvertedWarningButton;
-  } else if (button === "Danger") {
-    return InvertedDangerButton;
-  } else {
-    return InvertedPrimaryButton;
-  }
-};
-
-export const themePicker = (inverted: boolean, button: any) => {
-  return inverted ? invertedButtonPicker(button) : buttonPicker(button);
-};
-
-export default {
-  getFontSize,
-  getColor,
-  displayBlock,
-  disabledButton,
-  invertedButton,
-  buttonPicker,
-  themePicker
+export const themePicker = (inverted: boolean, styleType: any) => {
+  return inverted ? invertedTheme(styleType) : theme(styleType);
 };

@@ -4,41 +4,28 @@ import { themePicker } from "../utils";
 
 export interface Props {
   /**  Button Title  */
-
   title: string;
-
   /**  See Note above
    * @default Primary
    */
-
   buttonType: string;
-
   /**  Measured in rem
    * @default 1
    */
-
   font?: number;
-
   /**  Think Bootstrap
    * @default false
    */
-
   inverted?: boolean;
-
   /**  Disables button
    * @default false
    */
-
   disabled?: boolean;
-
   /**  Button True = Inline
    * @default false
    */
-
   block?: boolean;
-
   /**  this.chapter  */
-
   onClick?: () => any;
 }
 
@@ -48,8 +35,8 @@ export const displayBlock = `
 `;
 
 export const disabledButton = `
-opacity: .65;
-pointer-events: none;
+  opacity: .65;
+  pointer-events: none;
 `;
 
 const StyledButton = styled.button`
@@ -80,7 +67,7 @@ export const Button = (props: Props) => {
       font={font}
       inverted={inverted}
       disabled={disabled}
-      display={block ? 1 : 0} // better solution???
+      display={block ? true : false}
       onClick={onClick}
     >
       {title}

@@ -1,19 +1,37 @@
 import * as React from "react";
 import styled from "styled-components";
+import { themePicker } from "../utils";
 
 export interface Props {
+  /**  Label Title  */
+
   title: string;
-  color?: string;
+
+  /**  Think Bootstrap
+   * @default false
+   */
+
+  inverted?: boolean;
+  /**  See Note above
+   * @default Primary
+   */
+
+  buttonType: string;
 }
 
 const StyledLabel = styled.label`
   color: white;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  background: ${props => (props.color ? props.color : "pink")};
   border-radius: ${props => (props ? "2rem" : "0rem")};
+  ${(props: any) => themePicker(props.inverted, props.buttonType)};
 `;
 
 export const Label = (props: Props) => {
-  return <StyledLabel color={props.color}>{props.title}</StyledLabel>;
+  let { inverted, buttonType, title } = props;
+  return (
+    <StyledLabel inverted={inverted} buttonType={buttonType}>
+      {title}
+    </StyledLabel>
+  );
 };

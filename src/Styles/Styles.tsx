@@ -1,4 +1,4 @@
-const PrimaryButton = `
+const Primary = `
 color: #fff;
 background-color: #20a8d8;
 border-color: #20a8d8;
@@ -8,7 +8,7 @@ border-color: #20a8d8;
 }
 `;
 
-const InvertedPrimaryButton = `
+const InvertedPrimary = `
 color: #20a8d8;
 border-color: #20a8d8;
 :hover {
@@ -18,7 +18,7 @@ border-color: #20a8d8;
 }
 `;
 
-const SecondaryButton = `
+const Secondary = `
 color: #111;
 background-color: #c0cadd;
 border-color: #c0cadd;
@@ -28,7 +28,7 @@ border-color: #c0cadd;
 }
 `;
 
-const InvertedSecondaryButton = `
+const InvertedSecondary = `
 color: #c0cadd;
 border-color: #c0cadd;
 :hover {
@@ -38,7 +38,7 @@ border-color: #c0cadd;
 }
 `;
 
-const SuccessButton = `
+const Success = `
 color: #111;
 background-color: #79c447;
 border-color: #79c447;
@@ -48,7 +48,7 @@ border-color: #79c447;
 }
 `;
 
-const InvertedSuccessButton = `
+const InvertedSuccess = `
 color: #79c447;
 border-color: #79c447;
 :hover {
@@ -58,7 +58,7 @@ border-color: #79c447;
 }
 `;
 
-const WarningButton = `
+const Warning = `
 color: #111;
 background-color: #fabb3d;
 border-color: #fabb3d;
@@ -68,7 +68,7 @@ border-color: #fabb3d;
 }
 `;
 
-const InvertedWarningButton = `
+const InvertedWarning = `
 color: #fabb3d;
 border-color: #fabb3d;
 :hover {
@@ -78,7 +78,7 @@ border-color: #fabb3d;
 }
 `;
 
-const DangerButton = `
+const Danger = `
 color: #fff;
 background-color: #ff5454;
 border-color: #ff5454;
@@ -88,7 +88,7 @@ border-color: #ff5454;
 }
 `;
 
-const InvertedDangerButton = `
+const InvertedDanger = `
 color: tomato;
 border-color: tomato;
 :hover {
@@ -98,14 +98,14 @@ border-color: tomato;
 }
 `;
 export {
-  PrimaryButton,
-  InvertedPrimaryButton,
-  SecondaryButton,
-  InvertedSecondaryButton,
-  SuccessButton,
-  InvertedSuccessButton,
-  WarningButton,
-  InvertedWarningButton,
-  DangerButton,
-  InvertedDangerButton
+  Primary,
+  InvertedPrimary,
+  Secondary,
+  InvertedSecondary,
+  Success,
+  InvertedSuccess,
+  Warning,
+  InvertedWarning,
+  Danger,
+  InvertedDanger
 };
